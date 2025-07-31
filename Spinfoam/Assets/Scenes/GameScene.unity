@@ -516,7 +516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  turnSpeed: 15
+  turnSpeed: 45
+  timeSpeedMultiplier: 0.1
   playerInput: {fileID: 335906132}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

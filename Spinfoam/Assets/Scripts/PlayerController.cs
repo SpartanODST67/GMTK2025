@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] float turnSpeed = 5f;
+    [SerializeField] float timeSpeedMultiplier = .5f;
     private bool turning = false;
     private float direction = 0;
+    private float elapsedTime = 0;
 
     [SerializeField] PlayerInput playerInput;
     private InputAction turnAction;
@@ -19,18 +21,21 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         turnAction.performed += StartTurn;
+        turnAction.canceled += StopTurn;
     }
 
     private void OnDisable()
     {
-        turnAction.performed -= StopTurn;
+        turnAction.performed -= StartTurn;
+        turnAction.canceled -= StopTurn;
     }
 
     // Update is called once per frame
     void Update()
     {
         Turn();
-        transform.position += transform.up * speed * Time.deltaTime;
+        transform.position += transform.up * ((speed + (elapsedTime * timeSpeedMultiplier)) * Time.deltaTime);
+        elapsedTime += Time.deltaTime;
     }
 
     void StartTurn(InputAction.CallbackContext context)
