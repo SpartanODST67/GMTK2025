@@ -5,9 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] float turnSpeed = 5f;
+    [SerializeField] float turnSpeedMultiplier = 1f;
     [SerializeField] float timeSpeedMultiplier = .5f;
-    private bool turning = false;
-    private float direction = 0;
     private float elapsedTime = 0;
 
     [SerializeField] PlayerInput playerInput;
@@ -18,18 +17,6 @@ public class PlayerController : MonoBehaviour
         turnAction = playerInput.actions["Move"];
     }
 
-    private void OnEnable()
-    {
-        turnAction.performed += StartTurn;
-        turnAction.canceled += StopTurn;
-    }
-
-    private void OnDisable()
-    {
-        turnAction.performed -= StartTurn;
-        turnAction.canceled -= StopTurn;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,21 +25,8 @@ public class PlayerController : MonoBehaviour
         elapsedTime += Time.deltaTime;
     }
 
-    void StartTurn(InputAction.CallbackContext context)
-    {
-        turning = true;
-        direction = context.ReadValue<Vector2>().x;
-        Debug.Log(direction);
-    }
-
-    void StopTurn(InputAction.CallbackContext context)
-    {
-        turning = false;
-    }
-
-    void Turn()
-    {
-        if (!turning) return;
-        transform.Rotate(0, 0, -direction * turnSpeed * Time.deltaTime);
+    void Turn() 
+    { 
+        transform.Rotate(0, 0, -turnAction.ReadValue<Vector2>().x * turnSpeed * turnSpeedMultiplier * Time.deltaTime);
     }
 }
