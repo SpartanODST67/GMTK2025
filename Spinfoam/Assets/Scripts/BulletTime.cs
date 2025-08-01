@@ -11,6 +11,7 @@ public class BulletTime : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
     [SerializeField] PlayerController playerController;
     [SerializeField] float turnSpeedMultiplier = 4f;
+    [SerializeField] StatusBar bulletTimeBar;
 
     InputAction bulletTimeAction;
     InputAction bulletTimeAltAction;
@@ -66,6 +67,7 @@ public class BulletTime : MonoBehaviour
         {
             yield return null;
             bulletTime -= Time.deltaTime * (1/Time.timeScale);
+            bulletTimeBar.UpdateStatusBar(maxBulletTime, bulletTime);
         }
         bulletTime = 0;
 
@@ -78,6 +80,7 @@ public class BulletTime : MonoBehaviour
         {
             yield return null;
             bulletTime += bulletTimeGrowth * Time.deltaTime * (1 / Time.timeScale);
+            bulletTimeBar.UpdateStatusBar(maxBulletTime, bulletTime);
         }
         bulletTime = maxBulletTime;
     }
