@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 321490595}
   - component: {fileID: 321490597}
   - component: {fileID: 321490596}
+  - component: {fileID: 321490598}
   m_Layer: 5
   m_Name: Near Miss
   m_TagString: Untagged
@@ -583,6 +584,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321490594}
   m_CullTransparentMesh: 1
+--- !u!114 &321490598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321490594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1dbb6151dfb9b49988311f2875edc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 321490596}
+  timeBetweenDecay: 2
 --- !u!1 &335906131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1716440789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2019,7 +2034,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932525739}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

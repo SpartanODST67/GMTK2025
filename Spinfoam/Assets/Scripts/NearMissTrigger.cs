@@ -16,7 +16,7 @@ public class NearMissTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isNearMiss) Debug.Log("Near Miss!");
+        NearMissText.instance.NearMisses = 1;
         isNearMiss = false;
     }
 }
