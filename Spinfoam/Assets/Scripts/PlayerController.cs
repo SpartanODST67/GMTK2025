@@ -18,9 +18,13 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Turn();
+    }
+
+    void FixedUpdate()
+    {
         transform.position += transform.up * ((speed + (elapsedTime * timeSpeedMultiplier)) * Time.deltaTime);
         elapsedTime += Time.deltaTime;
     }
