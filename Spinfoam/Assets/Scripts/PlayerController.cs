@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] float turnSpeed = 5f;
-    [SerializeField] float turnSpeedMultiplier = 1f;
+    [SerializeField] public float turnSpeedMultiplier = 1f;
     [SerializeField] float timeSpeedMultiplier = .5f;
     private float elapsedTime = 0;
 
@@ -31,6 +31,6 @@ public class PlayerController : MonoBehaviour
 
     void Turn() 
     { 
-        transform.Rotate(0, 0, -turnAction.ReadValue<Vector2>().x * turnSpeed * turnSpeedMultiplier * Time.deltaTime);
+        transform.Rotate(0, 0, -turnAction.ReadValue<Vector2>().x * turnSpeed * turnSpeedMultiplier * Time.deltaTime * (1/Time.timeScale));
     }
 }

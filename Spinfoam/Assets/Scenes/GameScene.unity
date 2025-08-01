@@ -1030,7 +1030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1716440789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1382,6 +1382,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8235458762501140308, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
   m_PrefabInstance: {fileID: 4269813375416908821}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1932525743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2143523380915131804, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+  m_PrefabInstance: {fileID: 4269813375416908821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932525739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c11a31c2deca5d42a670ba8a3e028cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1932525745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1525,6 +1536,24 @@ PolygonCollider2D:
       - {x: -0.23333333, y: -0.37777779}
       - {x: -0.0025110096, y: -0.24928455}
   m_UseDelaunayMesh: 0
+--- !u!114 &1932525749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932525739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c75230be3289a64eb032f0437a5a6e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBulletTime: 20
+  bulletTimeGrowth: 0.25
+  bulletTimePower: 0.5
+  playerInput: {fileID: 335906132}
+  playerController: {fileID: 1932525743}
+  turnSpeedMultiplier: 4
 --- !u!224 &2010367860 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 984952287250267229, guid: aec1f4b3904e02c4b9fc43ff36f3c21b, type: 3}
@@ -1642,6 +1671,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 176720171423914687, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1932525748}
+    - targetCorrespondingSourceObject: {fileID: 176720171423914687, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1932525749}
   m_SourcePrefab: {fileID: 100100000, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
 --- !u!1001 &6689931396594365026
 PrefabInstance:
