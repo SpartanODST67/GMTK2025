@@ -13,7 +13,11 @@ public abstract class Obstacle : MonoBehaviour
     {
         if (collision.isTrigger) return;
 
-        if (collision.TryGetComponent(out NearMissTrigger nearMiss)) nearMiss.NearMiss = false;
+        if (collision.TryGetComponent(out NearMissTrigger nearMiss))
+        {
+            nearMiss.NearMiss = false;
+            nearMiss.BlockNearMiss();
+        }
 
         collision.gameObject.SetActive(false);
     }

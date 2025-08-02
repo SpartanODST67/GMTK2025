@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3179822803492123999}
   - component: {fileID: 5495024432157318896}
   - component: {fileID: 5017154963163883901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Orb Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
