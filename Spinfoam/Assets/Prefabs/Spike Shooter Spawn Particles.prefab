@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7125346837048383211
+--- !u!1 &461914593863108692
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8259593676235271696}
-  - component: {fileID: 399512229588884373}
-  - component: {fileID: 2109395160479829614}
-  - component: {fileID: 163718060522970531}
+  - component: {fileID: 7456741977044894695}
+  - component: {fileID: 6719726318110111151}
+  - component: {fileID: 7552806642397941017}
+  - component: {fileID: 2799781924916247850}
   m_Layer: 0
-  m_Name: Orb Spawn Particles
+  m_Name: Spike Shooter Spawn Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8259593676235271696
+--- !u!4 &7456741977044894695
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125346837048383211}
+  m_GameObject: {fileID: 461914593863108692}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &399512229588884373
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &6719726318110111151
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125346837048383211}
+  m_GameObject: {fileID: 461914593863108692}
   serializedVersion: 8
-  lengthInSec: 3
+  lengthInSec: 2.5
   simulationSpeed: 1
   stopAction: 3
   cullingMode: 0
@@ -170,7 +170,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: -0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -672,7 +672,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 90, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -752,7 +752,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0001
+      value: 0.3
       mode: 0
       spread: 0
       speed:
@@ -1035,7 +1035,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
     - serializedVersion: 2
-      time: 1
+      time: 0.75
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -1093,7 +1093,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
     - serializedVersion: 2
-      time: 2
+      time: 1.5
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -1322,10 +1322,10 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1378,7 +1378,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1431,8 +1431,8 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.7853982
+      minMaxState: 3
+      scalar: 12.56637
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -4940,14 +4940,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &2109395160479829614
+--- !u!199 &7552806642397941017
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125346837048383211}
+  m_GameObject: {fileID: 461914593863108692}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -5017,16 +5017,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &163718060522970531
+--- !u!114 &2799781924916247850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125346837048383211}
+  m_GameObject: {fileID: 461914593863108692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f2b8d6371dde3439aa7ab11ff42ab2, type: 3}
+  m_Script: {fileID: 11500000, guid: 463a2523a1caf9342b4f29aa36116a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbObstacle: {fileID: 0}
+  spinSpeed: 90
+  spikeShooter: {fileID: 0}

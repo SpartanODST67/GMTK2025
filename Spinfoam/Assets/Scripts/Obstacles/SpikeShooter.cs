@@ -7,7 +7,8 @@ public class SpikeShooter : Obstacle
     [SerializeField] Vector2 spinRange;
     [SerializeField] float spinSpeed;
     [SerializeField] float fireDelay = .5f;
-    [SerializeField] List<SpikeObstacle> spikes; 
+    [SerializeField] List<SpikeObstacle> spikes;
+    [SerializeField] ParticleSystem spawnParticle;
 
     private void Start()
     {
@@ -16,6 +17,20 @@ public class SpikeShooter : Obstacle
 
     public override void Spawn()
     {
+        foreach(SpikeObstacle spike in spikes)
+        {
+            spike.gameObject.SetActive(false);
+        }
+        spawnParticle.Play();
+    }
+
+    public void PostSpawn()
+    {
+        foreach(SpikeObstacle spike in spikes)
+        {
+            spike.gameObject.SetActive(true);
+        }
+
         float targetAngle = Random.Range(spinRange.x, spinRange.y);
         StartCoroutine(Spin(targetAngle));
     }
@@ -26,7 +41,6 @@ public class SpikeShooter : Obstacle
         while(currentAngle < targetAngle)
         {
             currentAngle += spinSpeed * Time.deltaTime;
-            Debug.Log(transform.localRotation);
             transform.localRotation = Quaternion.Euler(0, 0, currentAngle);
             yield return null;
         }
