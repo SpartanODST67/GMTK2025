@@ -19,7 +19,10 @@ public abstract class Obstacle : MonoBehaviour
             nearMiss.BlockNearMiss();
         }
 
-        collision.gameObject.SetActive(false);
+        if(collision.TryGetComponent(out PlayerDeath killer))
+        {
+            killer.Die();
+        }
     }
 
     public abstract void Spawn();

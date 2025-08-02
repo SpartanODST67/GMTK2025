@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7107132171187384006}
   - component: {fileID: 8201310865980896843}
   - component: {fileID: 6178986927038256767}
+  - component: {fileID: 5024663428691392388}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -292,3 +293,16 @@ MonoBehaviour:
   playerController: {fileID: 2143523380915131804}
   turnSpeedMultiplier: 4
   bulletTimeBar: {fileID: 0}
+--- !u!114 &5024663428691392388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176720171423914687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e47169cdd4a0ff43b0a17bf87040bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 7479629849183161819, guid: e8b732e8240608542a45a89684582dc9, type: 3}
