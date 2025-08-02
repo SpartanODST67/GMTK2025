@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Clone Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8235458762501140308, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -95,6 +99,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2143523380915131804, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
     - {fileID: 8408470922203866524, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+    - {fileID: 3848024064713049515, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+    - {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+    - {fileID: 5912976201565031961, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

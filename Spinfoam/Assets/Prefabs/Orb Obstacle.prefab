@@ -138,6 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBox: {fileID: 5495024432157318896}
-  scaleRange: {x: 0.45, y: 0.75}
+  scaleRange: {x: 0.25, y: 0.5}
   growthRateRange: {x: 0.1, y: 0.2}
   lifetime: 5
