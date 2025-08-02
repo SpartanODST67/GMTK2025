@@ -85,4 +85,10 @@ public class BulletTime : MonoBehaviour
         }
         bulletTime = maxBulletTime;
     }
+
+    public void AddBulletTime(float time)
+    {
+        bulletTime += time;
+        if (bulletTime > maxBulletTime) bulletTime = maxBulletTime;
+    }
 }

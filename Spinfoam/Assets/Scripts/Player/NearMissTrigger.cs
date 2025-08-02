@@ -10,6 +10,8 @@ public class NearMissTrigger : MonoBehaviour
         set { isNearMiss = value; }
     }
     [SerializeField] int scorePerNearMiss = 100;
+    [SerializeField] BulletTime bulletTime;
+    [SerializeField] float timePerNearMiss = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,6 +24,7 @@ public class NearMissTrigger : MonoBehaviour
         if (isBlocked || collision.gameObject == gameObject) return;
         NearMissText.instance.NearMisses = 1;
         Scorekeeper.instance.AddScore(scorePerNearMiss);
+        bulletTime.AddBulletTime(timePerNearMiss);
         isNearMiss = false;
     }
 

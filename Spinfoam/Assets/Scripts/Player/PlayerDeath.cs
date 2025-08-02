@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
         Scorekeeper.instance.StopScoredTime();
         Scorekeeper.instance.SaveHighScore();
         ObstacleSpawner.instance.StopSpawning();
+        MainMenu.instance.OpenMenu();
 
         gameObject.SetActive(false);
     }

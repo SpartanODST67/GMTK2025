@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class Scorekeeper : MonoBehaviour
@@ -40,7 +41,7 @@ public class Scorekeeper : MonoBehaviour
     public void SaveHighScore()
     {
         int highScore = Mathf.Max(PlayerPrefs.GetInt(HIGH_SCORE_KEY), Score);
-        PlayerPrefs.GetInt(HIGH_SCORE_KEY, highScore);
+        PlayerPrefs.SetInt(HIGH_SCORE_KEY, highScore);
     }
 
     public int GetHighScore()
@@ -69,6 +70,21 @@ public class Scorekeeper : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             AddScore(scorePerSecond);
+        }
+    }
+}
+
+[CustomEditor(typeof(Scorekeeper))]
+public class ScorekeeperEditor: Editor
+{
+    public override void OnInspectorGUI()
+    {
+        Scorekeeper scorekeeper = (Scorekeeper) target;
+        base.OnInspectorGUI();
+
+        if(GUILayout.Button("Delete High Score"))
+        {
+            PlayerPrefs.DeleteKey(Scorekeeper.HIGH_SCORE_KEY);
         }
     }
 }
