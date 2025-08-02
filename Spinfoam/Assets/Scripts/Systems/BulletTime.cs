@@ -38,6 +38,7 @@ public class BulletTime : MonoBehaviour
         bulletTimeAction.canceled -= StopBulletTime;
         bulletTimeAltAction.performed -= StartBulletTime;
         bulletTimeAltAction.canceled -= StopBulletTime;
+        StopBulletTime(false);
     }
 
     private void StartBulletTime(InputAction.CallbackContext context)
@@ -53,12 +54,12 @@ public class BulletTime : MonoBehaviour
         StopBulletTime();
     }
 
-    public void StopBulletTime()
+    public void StopBulletTime(bool regrow = true)
     {
         Time.timeScale = 1;
         if(currentRoutine != null) StopCoroutine(currentRoutine);
         playerController.turnSpeedMultiplier = 1;
-        currentRoutine = StartCoroutine(BulletTimeGrowth());
+        if(regrow) currentRoutine = StartCoroutine(BulletTimeGrowth());
     }
 
     IEnumerator BulletTimeDecay()

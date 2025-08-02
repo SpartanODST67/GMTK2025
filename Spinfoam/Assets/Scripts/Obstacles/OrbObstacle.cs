@@ -18,7 +18,6 @@ public class OrbObstacle : Obstacle
 
     public void PostSpawn()
     {
-        hitBox.enabled = true;
         StartCoroutine(Grow());
     }
 
@@ -31,6 +30,7 @@ public class OrbObstacle : Obstacle
             yield return null;
             Vector3 nextScale = Vector3.Lerp(transform.localScale, Vector3.one * targetScale, growthRate);
             transform.localScale += nextScale * Time.deltaTime;
+            if(!hitBox.enabled && transform.localScale.x < targetScale / 2) hitBox.enabled = true;
         }
         transform.localScale = Vector3.one * targetScale;
 
