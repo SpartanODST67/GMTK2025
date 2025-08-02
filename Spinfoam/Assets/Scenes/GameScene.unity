@@ -1981,10 +1981,6 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 335906132}
-    - target: {fileID: 3848024064713049515, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
-      propertyPath: timePerNearMiss
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
       propertyPath: playerInput
       value: 
