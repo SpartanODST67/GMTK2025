@@ -1299,7 +1299,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2522,9 +2522,9 @@ SceneRoots:
   - {fileID: 4269813375416908821}
   - {fileID: 1151848335}
   - {fileID: 335906133}
-  - {fileID: 1299605700}
   - {fileID: 56955370}
   - {fileID: 5686154697898539430}
   - {fileID: 107804598428495028}
   - {fileID: 1243633412}
   - {fileID: 6056989067098871789}
+  - {fileID: 1299605700}
