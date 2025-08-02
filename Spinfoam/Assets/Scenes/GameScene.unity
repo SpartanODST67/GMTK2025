@@ -1173,6 +1173,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec1f4b3904e02c4b9fc43ff36f3c21b, type: 3}
+--- !u!1 &1243633411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243633412}
+  - component: {fileID: 1243633413}
+  m_Layer: 0
+  m_Name: Kickstarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243633412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243633411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243633413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243633411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb2ded5ffd2b5e4082bf6ea04dc34b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starter: {fileID: 1552699506071872215}
 --- !u!1 &1299605696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +1964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStarted: 0
+  animator: {fileID: 232798513}
 --- !u!1001 &4269813375416908821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1935,6 +1981,10 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 335906132}
+    - target: {fileID: 3848024064713049515, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      propertyPath: timePerNearMiss
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
       propertyPath: playerInput
       value: 
@@ -2408,3 +2458,4 @@ SceneRoots:
   - {fileID: 56955370}
   - {fileID: 5686154697898539430}
   - {fileID: 107804598428495028}
+  - {fileID: 1243633412}
