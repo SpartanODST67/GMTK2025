@@ -12,6 +12,7 @@ public class BulletTime : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] float turnSpeedMultiplier = 4f;
     [SerializeField] StatusBar bulletTimeBar;
+    [SerializeField] MotionBlurVolume motionBlurVolume;
 
     InputAction bulletTimeAction;
     InputAction bulletTimeAltAction;
@@ -43,6 +44,7 @@ public class BulletTime : MonoBehaviour
 
     private void StartBulletTime(InputAction.CallbackContext context)
     {
+        motionBlurVolume.ActivateVolume();
         Time.timeScale = bulletTimePower;
         if(currentRoutine != null) StopCoroutine(currentRoutine);
         playerController.turnSpeedMultiplier = turnSpeedMultiplier;
@@ -56,6 +58,7 @@ public class BulletTime : MonoBehaviour
 
     public void StopBulletTime(bool regrow = true)
     {
+        motionBlurVolume.DeactivateVolume();
         Time.timeScale = 1;
         if(currentRoutine != null) StopCoroutine(currentRoutine);
         playerController.turnSpeedMultiplier = 1;
