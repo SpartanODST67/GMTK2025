@@ -140,4 +140,4 @@ MonoBehaviour:
   hitBox: {fileID: 5495024432157318896}
   scaleRange: {x: 0.25, y: 0.5}
   growthRateRange: {x: 0.1, y: 0.2}
-  lifetime: 5
+  lifetimeRange: {x: 1, y: 3}

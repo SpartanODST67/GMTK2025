@@ -5,14 +5,12 @@ public class OrbObstacle : Obstacle
 {
     [SerializeField] Vector2 scaleRange;
     [SerializeField] Vector2 growthRateRange;
-    [SerializeField] float lifetime = 5f;
-    //[SerializeField] Vector2 lifetimeRange;
+    [SerializeField] Vector2 lifetimeRange;
 
     public override void Spawn()
     {
-        transform.localScale = Vector3.zero;
+        transform.localScale = Vector3.zero;   
         StartCoroutine(Grow());
-        Invoke("Despawn", lifetime);
     }
 
     IEnumerator Grow()
@@ -26,6 +24,9 @@ public class OrbObstacle : Obstacle
             transform.localScale += nextScale * Time.deltaTime;
         }
         transform.localScale = Vector3.one * targetScale;
+
+        float lifetime = Random.Range(lifetimeRange.x, lifetimeRange.y);
+        Invoke(nameof(Despawn), lifetime);
     }
 
     public override void Despawn()
