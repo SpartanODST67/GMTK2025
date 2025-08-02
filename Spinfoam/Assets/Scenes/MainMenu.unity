@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &62578952 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 53706660428430617, guid: 38a0495f61352ee4e81fc6ca671c68a2, type: 3}
-  m_PrefabInstance: {fileID: 857323787}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &140688501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,22 +184,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077920731}
     m_Modifications:
-    - target: {fileID: 912715511225499639, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 1989403405}
-    - target: {fileID: 912715511225499639, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 159393467}
-    - target: {fileID: 1676586363410690922, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676586363410690922, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5494808189993036264, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
       propertyPath: m_Name
       value: Fade
@@ -303,11 +276,6 @@ PrefabInstance:
 --- !u!224 &159393466 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6220999116747836813, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-  m_PrefabInstance: {fileID: 159393465}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &159393467 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6664245188558947258, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
   m_PrefabInstance: {fileID: 159393465}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &349318311
@@ -619,21 +587,9 @@ PrefabInstance:
       value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 5079089318735457136, guid: 38a0495f61352ee4e81fc6ca671c68a2, type: 3}
-      propertyPath: fadeOut
-      value: 
-      objectReference: {fileID: 159393467}
-    - target: {fileID: 5079089318735457136, guid: 38a0495f61352ee4e81fc6ca671c68a2, type: 3}
-      propertyPath: startClosed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079089318735457136, guid: 38a0495f61352ee4e81fc6ca671c68a2, type: 3}
       propertyPath: sceneChanger
       value: 
       objectReference: {fileID: 1989403404}
-    - target: {fileID: 5079089318735457136, guid: 38a0495f61352ee4e81fc6ca671c68a2, type: 3}
-      propertyPath: highScoreText
-      value: 
-      objectReference: {fileID: 62578952}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -653,17 +609,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0933c2fc64423a246a1195c75cdb816c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1989403405 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1676586363410690922, guid: 7ccb84af6999cda479c19895d89d8001, type: 3}
-  m_PrefabInstance: {fileID: 159393465}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2077920727

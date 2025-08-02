@@ -51,8 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6656658631977647333}
-  fadeOut: {fileID: 0}
-  startClosed: 1
+  sceneChanger: {fileID: 0}
+  startClosed: 0
+  highScoreText: {fileID: 53706660428430617}
 --- !u!95 &6656658631977647333
 Animator:
   serializedVersion: 7

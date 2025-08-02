@@ -10,11 +10,6 @@ public class SpikeShooter : Obstacle
     [SerializeField] List<SpikeObstacle> spikes;
     [SerializeField] ParticleSystem spawnParticle;
 
-    private void Start()
-    {
-        Spawn();
-    }
-
     public override void Spawn()
     {
         foreach(SpikeObstacle spike in spikes)

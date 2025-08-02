@@ -13,15 +13,20 @@ public class ObstacleSpawner : MonoBehaviour
     int numObstacles = 0;
     [SerializeField] Vector2 spawnArea;
     public static ObstacleSpawner instance {  get; private set; }
+    private bool started = false;
 
     private void Awake()
     {
         instance = this;
     }
 
-    private void Start()
+    private void Update()
     {
-        StartSpawning();
+        if (!started && Starter.instance != null && Starter.instance.gameStarted)
+        {
+            StartSpawning();
+            started = true;
+        }
     }
 
     public void StartSpawning()
@@ -79,5 +84,4 @@ public class ObstacleSpawner : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, spawnArea);
     }
-
 }

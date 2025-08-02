@@ -11,6 +11,7 @@ public class Scorekeeper : MonoBehaviour
     int score = 0;
     [SerializeField] int scorePerSecond = 10;
     Coroutine scoreTime;
+    private bool isStarted = false;
 
     public int Score
     {
@@ -27,9 +28,13 @@ public class Scorekeeper : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    private void Update()
     {
-        StartScoredTime();
+        if(!isStarted && Starter.instance != null && Starter.instance.gameStarted == true)
+        {
+            StartScoredTime();
+            isStarted = true;
+        }
     }
 
     public void SaveHighScore()
