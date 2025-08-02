@@ -22,6 +22,6 @@ public abstract class Obstacle : MonoBehaviour
 
     public virtual void Despawn()
     {
-        ObstacleSpawner.instance.RemoveObstacle();
+        if(ObstacleSpawner.instance != null) ObstacleSpawner.instance.RemoveObstacle();
     }
 }
