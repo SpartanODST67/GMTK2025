@@ -1,0 +1,40 @@
+using System.Collections;
+using UnityEngine;
+
+public class OrbObstacle : Obstacle
+{
+    [SerializeField] Vector2 scaleRange;
+    [SerializeField] Vector2 growthRateRange;
+    [SerializeField] float lifetime = 5f;
+    //[SerializeField] Vector2 lifetimeRange;
+
+    private void Start()
+    {
+        Spawn();
+    }
+
+    public override void Spawn()
+    {
+        transform.localScale = Vector3.zero;
+        StartCoroutine(Grow());
+        Invoke("Despawn", lifetime);
+    }
+
+    IEnumerator Grow()
+    {
+        float targetScale = Random.Range(scaleRange.x, scaleRange.y);
+        float growthRate = Random.Range(growthRateRange.x, growthRateRange.y);
+        while(transform.localScale.x < targetScale)
+        {
+            yield return null;
+            Vector3 nextScale = Vector3.Lerp(transform.localScale, Vector3.one * targetScale, growthRate);
+            transform.localScale += nextScale * Time.deltaTime;
+        }
+        transform.localScale = Vector3.one * targetScale;
+    }
+
+    public override void Despawn()
+    {
+        Destroy(gameObject);
+    }
+}
