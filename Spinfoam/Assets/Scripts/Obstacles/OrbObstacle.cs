@@ -6,10 +6,19 @@ public class OrbObstacle : Obstacle
     [SerializeField] Vector2 scaleRange;
     [SerializeField] Vector2 growthRateRange;
     [SerializeField] Vector2 lifetimeRange;
+    [SerializeField] ParticleSystem spawnParticles;
+    [SerializeField] GameObject despawnParticles;
 
     public override void Spawn()
     {
-        transform.localScale = Vector3.zero;   
+        transform.localScale = Vector3.zero;
+        hitBox.enabled = false;
+        spawnParticles.Play();
+    }
+
+    public void PostSpawn()
+    {
+        hitBox.enabled = true;
         StartCoroutine(Grow());
     }
 
@@ -32,6 +41,7 @@ public class OrbObstacle : Obstacle
     public override void Despawn()
     {
         base.Despawn();
+        Instantiate(despawnParticles, transform.position, despawnParticles.gameObject.transform.rotation);
         Destroy(gameObject);
     }
 }
