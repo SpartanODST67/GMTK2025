@@ -9,6 +9,7 @@ public class NearMissTrigger : MonoBehaviour
         get { return isNearMiss; }
         set { isNearMiss = value; }
     }
+    [SerializeField] int scorePerNearMiss = 100;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +21,7 @@ public class NearMissTrigger : MonoBehaviour
     {
         if (isBlocked || collision.gameObject == gameObject) return;
         NearMissText.instance.NearMisses = 1;
+        Scorekeeper.instance.AddScore(scorePerNearMiss);
         isNearMiss = false;
     }
 

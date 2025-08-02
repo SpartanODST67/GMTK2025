@@ -16,11 +16,15 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
+        instance = this;
     }
 
     private void Start()
+    {
+        StartSpawning();
+    }
+
+    public void StartSpawning()
     {
         currentTimeBetweenSpawns = timeRange.x;
         Spawn();

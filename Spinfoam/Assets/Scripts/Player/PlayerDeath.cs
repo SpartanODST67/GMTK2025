@@ -7,5 +7,10 @@ public class PlayerDeath : MonoBehaviour
     public void Die()
     {
         Instantiate(deathParticles.gameObject, transform.position, transform.rotation);
+        Scorekeeper.instance.StopScoredTime();
+        Scorekeeper.instance.SaveHighScore();
+        ObstacleSpawner.instance.StopSpawning();
+
+        gameObject.SetActive(false);
     }
 }
