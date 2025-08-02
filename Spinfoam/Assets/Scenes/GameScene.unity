@@ -1070,6 +1070,7 @@ MonoBehaviour:
   timeBetweenLevels: 15
   obstacles:
   - {fileID: 5017154963163883901, guid: e3d969416aa06814c9ee5b89ed49eb73, type: 3}
+  - {fileID: -6863334252880367514, guid: 567ae72305adc344e8a1ee7bf2cac66e, type: 3}
   maxObstacles: 10
   spawnArea: {x: 15, y: 8}
 --- !u!4 &790658304

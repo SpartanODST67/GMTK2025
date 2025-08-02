@@ -65,6 +65,11 @@ public class ObstacleSpawner : MonoBehaviour
         if (numObstacles < 0) numObstacles = 0;
     }
 
+    public void StopSpawning()
+    {
+        CancelInvoke();
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
