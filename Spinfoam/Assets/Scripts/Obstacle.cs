@@ -20,5 +20,8 @@ public abstract class Obstacle : MonoBehaviour
 
     public abstract void Spawn();
 
-    public abstract void Despawn();
+    public virtual void Despawn()
+    {
+        ObstacleSpawner.instance.RemoveObstacle();
+    }
 }

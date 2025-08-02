@@ -5,7 +5,7 @@ public class Scorekeeper : MonoBehaviour
 {
     public const string HIGH_SCORE_KEY = "High_score";
     
-    public static Scorekeeper instance;
+    public static Scorekeeper instance { get; private set; }
     public TextMeshProUGUI scoreText;
     float score = 0;
     public float Score
@@ -21,7 +21,7 @@ public class Scorekeeper : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
-        else Destroy(this);
+        else Destroy(gameObject);
     }
 
     public void SaveHighScore()

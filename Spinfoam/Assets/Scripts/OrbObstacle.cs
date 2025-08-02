@@ -8,11 +8,6 @@ public class OrbObstacle : Obstacle
     [SerializeField] float lifetime = 5f;
     //[SerializeField] Vector2 lifetimeRange;
 
-    private void Start()
-    {
-        Spawn();
-    }
-
     public override void Spawn()
     {
         transform.localScale = Vector3.zero;
@@ -35,6 +30,7 @@ public class OrbObstacle : Obstacle
 
     public override void Despawn()
     {
+        base.Despawn();
         Destroy(gameObject);
     }
 }
