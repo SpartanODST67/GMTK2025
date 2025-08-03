@@ -2136,6 +2136,18 @@ PrefabInstance:
       propertyPath: bulletTimeBar
       value: 
       objectReference: {fileID: 104614382}
+    - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      propertyPath: maxBulletTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      propertyPath: bulletTimeGrowth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178986927038256767, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
+      propertyPath: turnSpeedMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8235458762501140308, guid: 4f7aaa097b5ea6d4faeaca2213c31f2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

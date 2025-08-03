@@ -6,6 +6,7 @@ public class StartButton : MonoBehaviour
     [SerializeField] Button button;
     [SerializeField] MainMenu mainMenu;
     [SerializeField] AudioSource buttonAudio;
+    [SerializeField] AudioSource announcer;
 
     private void Awake()
     {
@@ -13,7 +14,8 @@ public class StartButton : MonoBehaviour
         {
             button.enabled = false;
             mainMenu.CloseMenu();
-            buttonAudio.Play();
+            if(announcer != null) announcer.Play();
+            else buttonAudio.Play();
         });
     }
 }
