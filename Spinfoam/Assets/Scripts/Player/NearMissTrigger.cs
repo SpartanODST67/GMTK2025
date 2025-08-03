@@ -12,6 +12,7 @@ public class NearMissTrigger : MonoBehaviour
     [SerializeField] int scorePerNearMiss = 100;
     [SerializeField] BulletTime bulletTime;
     [SerializeField] float timePerNearMiss = 5f;
+    [SerializeField] AudioSource nearMissAudio;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +26,7 @@ public class NearMissTrigger : MonoBehaviour
         NearMissText.instance.NearMisses = 1;
         Scorekeeper.instance.AddScore(scorePerNearMiss);
         bulletTime.AddBulletTime(timePerNearMiss);
+        nearMissAudio.Play();
         isNearMiss = false;
     }
 
