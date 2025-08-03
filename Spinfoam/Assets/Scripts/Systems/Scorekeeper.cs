@@ -74,6 +74,7 @@ public class Scorekeeper : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(Scorekeeper))]
 public class ScorekeeperEditor: Editor
 {
@@ -88,3 +89,4 @@ public class ScorekeeperEditor: Editor
         }
     }
 }
+#endif

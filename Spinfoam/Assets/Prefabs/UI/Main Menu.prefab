@@ -343,7 +343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 220}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7729227089458203211
@@ -374,7 +374,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Made With Love
+  m_text: 'Hans Landgrebe
+
+    Made With Love'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c51eb53025fdc54dab78cd624a4fee7, type: 2}
   m_sharedMaterial: {fileID: 1588935763760047594, guid: 9c51eb53025fdc54dab78cd624a4fee7, type: 2}
@@ -719,6 +721,7 @@ MonoBehaviour:
   button: {fileID: 2199286870984386494}
   mainMenu: {fileID: 5079089318735457136}
   buttonAudio: {fileID: 8630764676928300183}
+  announcer: {fileID: 0}
 --- !u!82 &8630764676928300183
 AudioSource:
   m_ObjectHideFlags: 0

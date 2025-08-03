@@ -31,7 +31,6 @@ public class AreaDenialObstacle : Obstacle
             Color temp = sprite.color;
             temp.a = flash % 2 == 0 ? inactiveTransparency.x : inactiveTransparency.y;
             sprite.color = temp;
-            Debug.Log(sprite.color);
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, inactiveTransparency.z);

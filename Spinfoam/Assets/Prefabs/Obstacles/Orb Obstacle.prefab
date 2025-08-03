@@ -139,9 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBox: {fileID: 5495024432157318896}
-  scaleRange: {x: 0.25, y: 0.5}
-  growthRateRange: {x: 0.1, y: 0.2}
-  lifetimeRange: {x: 1, y: 3}
+  scaleRange: {x: 0.25, y: 0.75}
+  growthRateRange: {x: 0.1, y: 0.3}
+  lifetimeRange: {x: 1, y: 5}
   spawnParticles: {fileID: 3880206041896479726}
   despawnParticles: {fileID: 7793983877433306268, guid: 4d919668c9997a5458d2a7fc73206daa, type: 3}
 --- !u!1001 &3481872501657677947
