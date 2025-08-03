@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] PlayerDeathSound deathSound;
 
     public void Die()
     {
@@ -11,6 +12,7 @@ public class PlayerDeath : MonoBehaviour
         Scorekeeper.instance.SaveHighScore();
         ObstacleSpawner.instance.StopSpawning();
         MainMenu.instance.OpenMenu();
+        deathSound.Play();
 
         gameObject.SetActive(false);
     }
