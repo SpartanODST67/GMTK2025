@@ -12,6 +12,9 @@ public class BulletTime : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] float turnSpeedMultiplier = 4f;
     [SerializeField] StatusBar bulletTimeBar;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] Vector2 audioPitchRange;
+    float audioPitch;
 
     InputAction bulletTimeAction;
     InputAction bulletTimeAltAction;
@@ -22,6 +25,7 @@ public class BulletTime : MonoBehaviour
         bulletTime = maxBulletTime;
         bulletTimeAction = playerInput.actions["Sprint"];
         bulletTimeAltAction = playerInput.actions["Attack"];
+        audioPitch = audioSource.pitch;
     }
 
     private void OnEnable()
@@ -43,6 +47,8 @@ public class BulletTime : MonoBehaviour
 
     private void StartBulletTime(InputAction.CallbackContext context)
     {
+        audioSource.pitch = audioPitch * Random.Range(audioPitchRange.x, audioPitchRange.y);
+        audioSource.Play();
         MotionBlurVolume.instance.ActivateVolume();
         Time.timeScale = bulletTimePower;
         if(currentRoutine != null) StopCoroutine(currentRoutine);
